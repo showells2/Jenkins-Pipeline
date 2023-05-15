@@ -36,7 +36,7 @@ pipeline{
                     body: "Status: Success, Security scan log attached!"
                 }
             
-        }
+        
         stage("Deploy"){
             steps{
                 echo "Deploying to AWS EC2 instance ..."
