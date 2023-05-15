@@ -15,6 +15,7 @@ pipeline{
                     mail to: "sebastianhowells03@gmail.com",
                     subject: "Test Status Email",
                     body: "Status: Success, Test log attached!"
+                    attachLog: true
                 }
             }
         }
