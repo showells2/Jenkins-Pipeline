@@ -13,8 +13,8 @@ pipeline{
             post{
                 always{
                     mail to: "sebastianhowells03@gmail.com",
-                        subject: "Test Status Email",
-                        emailext attachLog} true}
+                    subject: "Test Status Email",
+                        emailext attachLog: true,
                     body: "Status: Success, Test log attached!"
                 }
             }
@@ -32,11 +32,11 @@ pipeline{
                 always{
                     mail to: "sebastianhowells03@gmail.com",
                     subject: "Security Status Email",
-                        emailext attachLog} true}
+                        emailext attachLog: true,
                     body: "Status: Success, Security scan log attached!"
                 }
-            
-        
+            }
+        }
         stage("Deploy"){
             steps{
                 echo "Deploying to AWS EC2 instance ..."
@@ -57,5 +57,5 @@ pipeline{
                 echo "Deploying to AWS EC2 production server ..."
             }
         }
-    
-
+    }
+}
