@@ -12,11 +12,10 @@ pipeline{
             }
             post{
                 always{
-                    emailext(
-                    to: "sebastianhowells03@gmail.com",
+                    mail to: "sebastianhowells03@gmail.com",
                     subject: "Test Status Email",
-                    attachLog: true,
-                    body: "Status: Success, Test log attached!")
+                    emailext(attachLog: true),
+                    body: "Status: Success, Test log attached!"
                 }
             }
         }
@@ -31,11 +30,10 @@ pipeline{
             }
             post{
                 always{
-                    emailext(
-                    to: "sebastianhowells03@gmail.com",
+                    mail to: "sebastianhowells03@gmail.com",
                     subject: "Security Status Email",
-                    attachLog: true,
-                    body: "Status: Success, Security scan log attached!")
+                    emailext(attachLog: true),
+                    body: "Status: Success, Security scan log attached!"
                 }
             }
         }
