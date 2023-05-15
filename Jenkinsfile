@@ -13,9 +13,9 @@ pipeline{
             post{
                 always{
                     mail to: "sebastianhowells03@gmail.com",
-                        emailext attachLog: true,
+                    emailext( attachLog: true,
                     subject: "Test Status Email",
-                    body: "Status: Success, Test log attached!"
+                    body: "Status: Success, Test log attached!")
                 }
             }
         }
