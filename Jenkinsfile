@@ -32,7 +32,7 @@ pipeline{
                 always{
                     mail to: "sebastianhowells03@gmail.com",
                     subject: "Security Status Email",
-                    emailext attachLog: true,
+                        emailext attachLog} true}
                     body: "Status: Success, Security scan log attached!"
                 }
             }
