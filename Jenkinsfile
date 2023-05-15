@@ -14,8 +14,8 @@ pipeline{
                 always{
                     mail to: "sebastianhowells03@gmail.com",
                     subject: "Test Status Email",
-                    body: "Status: Success, Test log attached!",
-                    emailext attachLog: true
+                    emailext attachLog: true,
+                    body: "Status: Success, Test log attached!"
                 }
             }
         }
@@ -32,8 +32,8 @@ pipeline{
                 always{
                     mail to: "sebastianhowells03@gmail.com",
                     subject: "Security Status Email",
-                    body: "Status: Success, Security scan log attached!",
-                    emailext attachLog: true
+                    emailext attachLog: true,
+                    body: "Status: Success, Security scan log attached!"
                 }
             }
         }
