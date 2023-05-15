@@ -57,5 +57,5 @@ pipeline{
                 echo "Deploying to AWS EC2 production server ..."
             }
         }
-    }
+    
 }
