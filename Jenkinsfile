@@ -35,7 +35,7 @@ pipeline{
                         emailext attachLog} true}
                     body: "Status: Success, Security scan log attached!"
                 }
-            }
+            
         }
         stage("Deploy"){
             steps{
